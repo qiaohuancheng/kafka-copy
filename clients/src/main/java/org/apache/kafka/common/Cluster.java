@@ -57,7 +57,7 @@ public class Cluster {
             }
             this.avaliablePartitionsByTopic.put(topic, Collections.unmodifiableList(availablePartitions));
         }
-        this.partitionsByNode = new HashMap<Integer, List<PartitionInfo>>(partitionsByNode.size());
+        this.partitionsByNode = new HashMap<Integer, List<PartitionInfo>>(partsForNode.size());
         for (Map.Entry<Integer, List<PartitionInfo>> entry : partsForNode.entrySet())
             this.partitionsByNode.put(entry.getKey(), Collections.unmodifiableList(entry.getValue()));
     }

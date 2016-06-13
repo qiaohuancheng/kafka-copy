@@ -8,6 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import javax.security.auth.callback.Callback;
 
+import org.apache.kafka.clients.producer.internals.Metadata;
 import org.apache.kafka.clients.producer.internals.Partitioner;
 import org.apache.kafka.common.Metric;
 import org.apache.kafka.common.MetricName;

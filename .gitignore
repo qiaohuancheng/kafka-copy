@@ -55,3 +55,5 @@ Temporary Items
 
 #忽略gitignore文件  
 .gitignore
+
+.cache-main

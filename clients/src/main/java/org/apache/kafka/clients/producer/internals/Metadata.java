@@ -1,5 +1,7 @@
 package org.apache.kafka.clients.producer.internals;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.kafka.common.Cluster;
@@ -21,8 +23,13 @@ public class Metadata {
     }
     
     public Metadata(long refreshBackoffMs, long metadataExpireMs) {
-        
-        
+        this.refreshBackoffMs = refreshBackoffMs;
+        this.metadataExpireMs = metadataExpireMs;
+        this.lastRefreshMs = 0L;
+        this.version = 0;
+        this.cluster = Cluster.empty();
+        this.needUpdate = false;
+        this.topics = new HashSet<String>();
     }
     
 
