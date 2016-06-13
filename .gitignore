@@ -46,7 +46,7 @@ Temporary Items
 .metadata
 
 # project
-.class
+*.class
 .classpath
 .project
 .settings
