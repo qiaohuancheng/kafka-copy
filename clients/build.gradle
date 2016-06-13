@@ -1,0 +1,17 @@
+apply plugin: 'application'
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories {  
+    mavenCentral() 
+}  
+
+ext.slf4jVersion="1.7.6"
+ext.log4jVersion="1.2.17"
+dependencies {
+	compile("org.slf4j:slf4j-api:${slf4jVersion}")
+	compile("org.slf4j:slf4j-log4j12:${slf4jVersion}")
+	compile("log4j:log4j:${log4jVersion}")
+}
+

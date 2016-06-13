@@ -1,0 +1,24 @@
+apply plugin: 'application'
+apply plugin: 'scala'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+repositories {  
+    mavenCentral() 
+}  
+
+ext.slf4jVersion="1.7.6"
+ext.metricsVersion="2.2.0"
+ext.log4jVersion="1.2.17"
+ext.snappyVersion="1.1.1.6"
+ext.scalaVersion="2.10.4"
+dependencies {
+	compile("org.scala-lang:scala-library:${scalaVersion}")
+	compile("org.scala-lang:scala-compiler:${scalaVersion}")
+	compile("org.scala-lang:scala-reflect:${scalaVersion}")
+	compile("org.slf4j:slf4j-api:${slf4jVersion}")
+	compile("com.yammer.metrics:metrics-core:${metricsVersion}")
+	compile("log4j:log4j:${log4jVersion}")
+	compile("org.xerial.snappy:snappy-java:${snappyVersion}")
+}
+
